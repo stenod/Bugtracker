@@ -5,6 +5,7 @@ import { navbarRoute } from './layouts/navbar/navbar.route';
 import { DEBUG_INFO_ENABLED } from 'app/app.constants';
 
 import { UserRouteAccessService } from 'app/core/auth/user-route-access-service';
+import { MyticketsComponent } from 'app/mytickets/mytickets.component';
 
 const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
 
@@ -12,6 +13,10 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
   imports: [
     RouterModule.forRoot(
       [
+        {
+          path: 'jhi-mytickets',
+          component: MyticketsComponent
+        },
         {
           path: 'admin',
           data: {
